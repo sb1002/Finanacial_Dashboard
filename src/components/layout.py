@@ -1,5 +1,5 @@
 from dash import Dash, html
-from . import dropdown
+from . import dropdown, barchart
 
 def create_layout(app: Dash) -> html.Div:
     return html.Div(
@@ -12,7 +12,8 @@ def create_layout(app: Dash) -> html.Div:
                 children=[
                     dropdown.render(app)
                 ]
-            )
+            ),
+            barchart.render(app)
         ]
     )
 
