@@ -1,7 +1,8 @@
 from dash import Dash, html
-from . import dropdown, barchart
+from . import dropdown, year_dropdown, barchart
+import pandas as pd
 
-def create_layout(app: Dash) -> html.Div:
+def create_layout(app: Dash, data: pd.DataFrame) -> html.Div:
     return html.Div(
         className="app-div",
         children=[
@@ -10,10 +11,10 @@ def create_layout(app: Dash) -> html.Div:
             html.Div(
                 className="dropdown-container",
                 children=[
-                    dropdown.render(app)
+                    year_dropdown.render(app, data)
                 ]
             ),
-            barchart.render(app)
+            barchart.render(app, data)
         ]
     )
 
