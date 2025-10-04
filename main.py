@@ -3,7 +3,7 @@ from dash_bootstrap_components.themes import BOOTSTRAP
 from src.components.layout import create_layout
 from src.data.loader import load_transaction_data
 
-DATA_PATH = "Finanacial_Dashboard/src/data/sample_data.csv"
+DATA_PATH = "/Users/snehabalur/Financial_Dashboard/Financial_Dashboard/src/data/sample_data.csv"
 
 def main() -> None:
     data = load_transaction_data(DATA_PATH)
